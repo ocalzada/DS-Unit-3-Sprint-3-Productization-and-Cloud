@@ -13,8 +13,8 @@ status, body = api.measurements(city="Los Angeles", parameter="pm25")
 @app.route("/")
 def root():
     """Base View"""
-    return str(Record.query.filter(Record.value >10).all())
-    
+    return str(Record.query.filter(Record.value >= 10).all())
+
 def get_data():
     """pulling results into a list of tuples and returning as a string"""
     data = []
